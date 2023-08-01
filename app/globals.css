@@ -27,3 +27,10 @@ body {
   background-color: var(--Charcoal-Grey);
   color: var(--Dark-Slate-Grey);
 }
+
+/* Responsive Style */
+@media (max-width: 640px) {
+  body {
+    background-color: var(--White);
+  }
+}

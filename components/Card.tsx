@@ -1,44 +1,45 @@
 import { CardProps } from '@/types'
 import IconList from '../assets/images/icon-list.svg';
 import ImgDesktop from '../assets/images/illustration-sign-up-desktop.svg';
+import ImgMobile from '../assets/images/illustration-sign-up-mobile.svg';
 import Image from 'next/image'
 import React from 'react'
 
 const Card = ({ card_Title, card_Text, card_List }: CardProps) => {
     
   return (
-    <div className='bg-slate-100 flex h-[500px] rounded-3xl p-1 py-4'>
-        <div className="left-side flex-auto text-center">
-            <h2 className='font-bold px-5 mt-4 text-4xl text-center'>
-                {card_Title}
-            </h2>
-            <p className='px-5'>
-                {card_Text}
-            </p>
-            <ul className='px-10'>
-                {card_List?.map((item, index) => (
-                    <li key={index} className='flex ps-1'>
-                        <Image 
-                            src={IconList} 
-                            alt='icon-list' 
-                            width={20} 
-                            height={20}
-                            className='pe-1'
-                        />
-                        {item}
-                    </li>
-                ))}
-            </ul>
-            <div className='form px-5'>
-                <input type='email' placeholder='email@company.com' className='w-full rounded-md'></input>
-                <button type='submit' className='bg-slate-800 w-full rounded-md text-white py-2'>Subscribe to monthly newsletter</button>
-            </div>
+    <div className='w-full md:w-[700px] h-full sm:h-[500px] 
+    flex flex-col sm:flex-row bg-white sm:p-4 rounded-3xl'>
+        {/* Top Image (Visible on medium and below) */}
+        <div className="top-side sm:hidden w-full">
+            <Image 
+                src={ImgMobile}
+                alt='mobile-illustration'
+                className='w-full h-full'
+            />
         </div>
-        <div className="right-side flex-auto">
-            <Image
+        {/* Form (Always visible) */}
+        <div className="flex-1">
+          <h2>
+            {card_Title}
+          </h2>
+          <p>
+            {card_Text}
+          </p>
+          <ul>
+            {card_List?.map((item, index) => (
+                <li key={index}>
+                  {item}
+                </li>
+              ))}
+          </ul>
+        </div>
+        {/* Right Side Image (Hidden on medium and above) */}
+        <div className="hidden sm:flex flex-1">
+          <Image 
                 src={ImgDesktop}
-                alt='desktop-illustration'
-                className='h-full w-full object-fill'
+                alt='mobile-illustration'
+                className='w-full h-full'
             />
         </div>
     </div>
