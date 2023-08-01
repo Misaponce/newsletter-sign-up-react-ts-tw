@@ -33,6 +33,14 @@ const Card = ({ card_Title, card_Text, card_List }: CardProps) => {
                 </li>
               ))}
           </ul>
+          <form className='block'>
+              <label htmlFor='sign-up-form'>Email address</label>
+              <input type="email" 
+                className='mt-1 block w-full rounded-md' 
+                placeholder='email@company.com' 
+                id='sign-up-form'/>
+                <button type='submit' className='btn w-full rounded-md mt-4 py-2'>Subscribe to monthly newsletter</button>
+          </form>
         </div>
         {/* Right Side Image (Hidden on medium and above) */}
         <div className="hidden sm:flex flex-1">

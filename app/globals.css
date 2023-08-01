@@ -18,7 +18,7 @@
   --Charcoal-Grey: hsl(235, 18%, 26%);
   --Grey: hsl(231, 7%, 60%);
   --White: hsl(0, 0%, 100%);
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 /* General Styles */
@@ -26,6 +26,25 @@ body {
   height: 100vh;
   background-color: var(--Charcoal-Grey);
   color: var(--Dark-Slate-Grey);
+}
+
+/* Sign up Form style*/
+
+.btn {
+  background-color: hsl(234, 29%, 20%);
+  color: var(--White);
+}
+
+.btn:hover {
+  color: var(--White);
+  background-color: var(--Tomato);
+  box-shadow: -1px 13px 17px -4px var(--Tomato);
+}
+
+#sign-up-form:focus {
+  box-shadow: none;
+  border-color: hsl(234, 29%, 20%);
+  color: hsl(234, 29%, 20%);
 }
 
 /* Responsive Style */
