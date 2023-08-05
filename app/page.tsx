@@ -15,7 +15,6 @@ export default function Home() {
     if (email === '') {
       return alert('Email Invalido')
     } else {
-      console.log(`email ingresado ${email}`);
       localStorage.setItem('email', email);
       router.push('/successcard');
     }

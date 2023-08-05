@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import IconSuccess from '../assets/images/icon-success.svg';
+import Link from 'next/link';
 
 const SuccessCard = () => {
 
@@ -30,9 +31,11 @@ const SuccessCard = () => {
       </div>
     </div>
     <div className='w-full h-full px-8 flex flex-col justify-end sm:justify-center items-center'>
-        <button className='w-full btn rounded-md py-3 mb-4'>
-          Dismiss message
-        </button>
+          <Link href='/' className='w-full'>
+            <button className='w-full btn rounded-md py-3 mb-4'>
+                Dismiss message
+            </button>
+          </Link>
     </div>
   </div>
   )
