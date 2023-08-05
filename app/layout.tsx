@@ -13,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <head>
+        <link rel='icon' href='/favicon.ico' sizes='any'/>
+      </head>
+      <body className='flex justify-center items-center'>
         {children}
       </body>
     </html>
